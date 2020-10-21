@@ -1,3 +1,4 @@
+"""
 Encapsulamento
 º Encapsulamento diz respeito à proteção dos atributos ou métodos de uma classe
 º Consiste em separar aspectos externos de um objeto dos detalhes internos de implementação
@@ -36,7 +37,7 @@ O símbolo - representa um atributo ou método privado
 | + set_cpf(cpf)    |
 | + set_rg(rg)      |
 |-------------------|
-
+"""
 Exemplo 01:
 
 class Pessoa:

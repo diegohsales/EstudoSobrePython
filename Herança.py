@@ -98,3 +98,77 @@ professor1 = Professor("João", "joao@email.com", 11888888, 2000.0)
 aluno1.exibir_dados()
 professor1.exibir_dados()
 """
+"""
+Herança Multipla
+Herança multipla é quando a classe mãe herda mais de uma classe, exemplo:
+Anfibio herda da classe Animal Terreste e Animal Aquatico.
+
+Exemplo 01:
+
+class AnimalTerrestre:
+    def __init__(self):
+        self.habitat = 'Terra'
+
+    def andar(self):
+        print('Animal Terrestre Andando')
+
+    def comer(self):
+        print('Animal Terrestre Comendo')
+
+
+class AnimalAquatico:
+    def __init__(self):
+        self.habitat = 'Agua'
+
+    def nadar(self):
+        print('Animal Aquatico Nadando')
+
+    def comer(self):
+        print('Animal Aquatico Comendo')
+
+
+class Anfibio(AnimalAquatico, AnimalTerrestre):
+    def __init__(self, nome):
+        AnimalAquatico.__init__(self)
+        AnimalTerrestre.__init__(self)
+        self.nome = nome
+
+
+animal = Anfibio()
+animal.andar()
+animal.nadar()
+animal.comer()
+
+Exemplo 02
+
+class Portugues:
+    def dizer_oi(self):
+        print('Oi!')
+
+    def dizer_tchau(self):
+        print('Tchau!')
+
+
+class Ingles:
+    def dizer_oi(self):
+        print('Hi!')
+
+    def dizer_tchau(self):
+        print('Bye!')
+
+    def dizer_alguma_coisa(self):
+        print('something')
+
+
+class Bilingue(Portugues, Ingles):
+    def dizer_oi(self):
+        Portugues.dizer_oi(self)
+        Ingles.dizer_oi(self)
+
+
+pessoa = Bilingue()
+pessoa.dizer_oi()
+pessoa.dizer_tchau()
+pessoa.dizer_alguma_coisa()
+
+"""
