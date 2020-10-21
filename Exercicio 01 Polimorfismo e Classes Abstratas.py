@@ -7,9 +7,6 @@ Observe que as classes não possuem atributos, portanto não precisam ter constr
 """
 
 
-
-
-
 # Programa Principal
 
 soma = Soma()
